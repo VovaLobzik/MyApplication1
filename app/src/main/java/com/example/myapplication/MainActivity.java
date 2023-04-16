@@ -67,6 +67,5 @@ public class MainActivity extends AppCompatActivity {
             possibilityOut.setText("Недостаточно средств для покупки серверного комплекта");
             balanceOut.setText(" - ");
         }
-
     }
 }
