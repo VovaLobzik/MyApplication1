@@ -55,5 +55,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) { // создание жизненного типа активности
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // присваинвание жизенному циклу активности представленных activity_main
+        // присваивание переменным активити элементов представления activity_main
+        possibilityOut = findViewById(R.id.possibilityOut); // вывод информации о возможности покупки
+        balanceOut = findViewById(R.id.balanceOut); // вывод информации о возможном остатке от покупки
+
+        // запонение экрана
+        if (possibility()) { // если имеется возможность купить серверный комплект
+            possibilityOut.setText("Имеется достаточно средств для покупки серверного комплекта");
+            balanceOut.setText("Остаток от покупки " + balance() + " серебрянных монет");
+        } else { // иначе
+            possibilityOut.setText("Недостаточно средств для покупки серверного комплекта");
+            balanceOut.setText(" - ");
+        }
+
     }
 }
